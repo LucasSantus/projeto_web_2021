@@ -8,6 +8,10 @@ if(!isset($_SESSION["nome"])){
 
 <h1>Área restrita</h1>
 
+<div id="btn-limpar-sessao">
+    <a href="?pg=cruds/listar">Listar usuários</a>
+</div>
+
 <p>Bem-vindo(a), <?= $_SESSION["nome"] ?>!</p>
 
 <div id="btn-limpar-sessao">
