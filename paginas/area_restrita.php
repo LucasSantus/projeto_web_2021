@@ -10,4 +10,4 @@ if(!isset($_SESSION["nome"])){
 
 <p>Seja Bem-vindo(a), <?= $_SESSION["nome"] ?>!</p>
 
-<p>Tem Permissão de Administrador!</p>
+<p>Permissão de Administrador!</p>

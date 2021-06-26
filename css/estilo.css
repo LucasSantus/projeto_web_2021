@@ -1,6 +1,7 @@
 table{
     width: 700px;
     margin: 0 auto;
+    margin-top: 20px; margin-bottom: 10px
 }
 
 td, th{
@@ -12,12 +13,25 @@ td, th{
 .btn-table{
     border: 1px solid rgb(108, 145, 132);
     margin: 3px;
-    padding: 4px;
+    padding: 6px;
     border-radius: 10px;
     background-color: rgb(202, 204, 240);
 }
 
 .btn-table:hover{
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.8s;
+}
+
+.btn-cadastro{
+    border: 1px solid rgb(108, 145, 132);
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(202, 204, 240);
+}
+
+.btn-cadastro:hover{
     background-color: #fff;
     cursor: pointer;
     transition: all 0.8s;

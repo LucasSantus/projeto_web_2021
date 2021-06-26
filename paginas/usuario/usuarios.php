@@ -4,7 +4,11 @@ $sql = "SELECT * FROM usuarios";
 $result = $conn->query($sql, PDO::FETCH_ASSOC);
 ?>
 
-<h3>Listagem de Usuários</h3>
+<h2>Listagem de Usuários</h2>
+
+<div>
+    <a class="btn-table btn-cadastro" href="?pg=usuario/cadastrar_usuario">CADASTRAR</a>
+</div>
 
 <table>
     <tr>
@@ -36,9 +40,4 @@ $result = $conn->query($sql, PDO::FETCH_ASSOC);
     <?php
         }
     ?>
-    <div>
-        <ul>
-            <a href="?pg=usuario/cadastrar_usuario"><li>CADASTRAR</li></a>
-        </ul>
-    </div>
 </table>
