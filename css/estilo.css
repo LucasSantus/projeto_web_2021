@@ -3,8 +3,24 @@ table{
     margin: 0 auto;
 }
 
-table, td, th{
-    border: solid 1px #000;
+td, th{
+    border: solid 1px rgb(175, 175, 175);
+    padding: 5px;
+    text-align: center;
+}
+
+.btn-table{
+    border: 1px solid rgb(108, 145, 132);
+    margin: 3px;
+    padding: 4px;
+    border-radius: 10px;
+    background-color: rgb(202, 204, 240);
+}
+
+.btn-table:hover{
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.8s;
 }
 
 #div-form{

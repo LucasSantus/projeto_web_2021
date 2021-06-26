@@ -8,12 +8,6 @@ if(!isset($_SESSION["nome"])){
 
 <h1>Área restrita</h1>
 
-<div id="btn-limpar-sessao">
-    <a href="?pg=cruds/listar">Listar usuários</a>
-</div>
+<p>Seja Bem-vindo(a), <?= $_SESSION["nome"] ?>!</p>
 
-<p>Bem-vindo(a), <?= $_SESSION["nome"] ?>!</p>
-
-<div id="btn-limpar-sessao">
-    <a href="?pg=login/limpar_sessao">Sair</a>
-</div>
+<p>Tem Permissão de Administrador!</p>

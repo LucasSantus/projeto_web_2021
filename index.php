@@ -8,6 +8,8 @@ session_start();
 
 require("bd/conexao.php");
 
+date_default_timezone_set('America/Sao_Paulo');
+
 ?>
 
 <html>
@@ -41,6 +43,9 @@ require("bd/conexao.php");
                         else{
                     ?>
                         <a href="?pg=area_restrita"><li>Área restrita</li></a>
+                        <a href="?pg=usuario/usuarios"><li>Usuários</li></a>
+                        <a href="?pg=logs"><li>Logs</li></a>
+                        <a href="?pg=login/limpar_sessao"><li>Sair</li></a>
                     <?php
                         }
                     ?>

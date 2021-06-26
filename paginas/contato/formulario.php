@@ -12,15 +12,15 @@
     <form method="POST" action="?pg=contato/processar_formulario">
         <div>
             <label>Nome</label>
-            <input type="text" name="nome" placeholder="Digite seu nome..." />
+            <input type="text" name="nome" placeholder="Digite seu nome..." required/>
         </div>
         <div>
             <label>Telefone</label>
-            <input type="text" name="telefone" placeholder="Digite seu telefone..." />
+            <input type="text" name="telefone" placeholder="Digite seu telefone..." required/>
         </div>
         <div>
             <label>E-mail</label>
-            <input type="email" name="email" placeholder="Digite seu email..." />
+            <input type="email" name="email" placeholder="Digite seu email..." required/>
         </div>
         <div>
             <label>Cidade</label>
@@ -37,7 +37,7 @@
         </div>
         <div>
             <label>Mensagem</label>
-            <textarea name="mensagem" placeholder="Digite a mensagem..."></textarea>
+            <textarea name="mensagem" placeholder="Digite a mensagem..." required></textarea>
         </div>
         <button type="submit">Enviar</button>
     </form>
