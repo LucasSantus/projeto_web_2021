@@ -1,19 +1,16 @@
-<h2>Logs módulo usuário</h2>
+<h2>Logs</h2>
 
 <?php
-
 $sql = "SELECT * FROM logs";
-
 $result = $conn->query($sql, PDO::FETCH_ASSOC);
-
 ?>
 
 <table>
     <tr>
-        <th>Número do registro</th>
-        <th>Usuário Executor</th>
-        <th>Ação executada</th>
-        <th>Data e hora</th>
+        <th>ID</th>
+        <th>Administrador</th>
+        <th>Ação</th>
+        <th>Horário</th>
     </tr>
     <?php
         while($linha = $result->fetch()){
@@ -23,7 +20,6 @@ $result = $conn->query($sql, PDO::FETCH_ASSOC);
                 foreach($linha as $chave => $valor){
             ?>
                 <td><?= $valor ?></td>
-                
             <?php
                 }
             ?>          

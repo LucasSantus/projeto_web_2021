@@ -1,14 +1,12 @@
 <?php
-
-
 if(!empty($_POST)){
-    
     $nome = $_POST["nome"];
     $usuario = $_POST["usuario"];
     $senha = $_POST["senha"];
     $data_hora_criacao = date('Y-m-d H:i:s');
+
     $usuario_resp= $_SESSION["nome"];
-    $descricao = ("Cadastro de usuario");
+    $descricao = ("Cadastrar | Usuário -> ".$usuario);
     $data_hora = date('Y-m-d H:i:s');
 
     # Insert no banco de dados
@@ -22,17 +20,14 @@ if(!empty($_POST)){
         $conn->beginTransaction();
         $stmt->execute($bind_param);
         $stmt1->execute($bind_param1);
-        echo '<div class="msg-cadastro-contato msg-cadastro-sucesso">Registro ' . $conn->lastInsertId() . ' inserido no banco!</div>';
+        echo '<div class="msg-cadastro-contato msg-cadastro-sucesso">Usuário '. $usuario .' inserido no banco!</div>';
         $conn->commit();
     } catch(PDOExecption $e) {
         $conn->rollback();
-        echo '<div class="msg-cadastro-contato msg-cadastro-erro">Erro ao inserir registro no banco: ' . $e->getMessage() . '</div>';
+        echo '<div class="msg-cadastro-contato msg-cadastro-erro">Não foi possível cadastrar o usuário -> ' . $e->getMessage() . '</div>';
     }
-
 }
-
 ?>
-
 <div id="btn-limpar-sessao">
     <a href="?pg=usuario/usuarios">Voltar</a>
 </div>

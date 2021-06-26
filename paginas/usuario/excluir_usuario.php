@@ -3,10 +3,10 @@
 <?php
 
 if(isset($_GET["id"])){
-    
     $id = $_GET["id"];
+
     $usuario_resp= $_SESSION["nome"];
-    $descricao = ("Exclusão de usuario:".$id);
+    $descricao = ("Deletar | id -> ".$id);
     $data_hora = date('Y-m-d H:i:s');
 
     # Delete no banco de dados
@@ -20,17 +20,14 @@ if(isset($_GET["id"])){
         $conn->beginTransaction();
         $stmt->execute($bind_param);
         $stmt1->execute($bind_param1);
-        echo '<div class="msg-cadastro-contato msg-cadastro-sucesso">Registro ' . $id . ' deletado do banco!</div>';
+        echo '<div class="msg-cadastro-contato msg-cadastro-sucesso">Usuário Deletado!</div>';
         $conn->commit();
     } catch(PDOExecption $e) {
         $conn->rollback();
-        echo '<div class="msg-cadastro-contato msg-cadastro-erro">Erro ao deletar registro no banco: ' . $e->getMessage() . '</div>';
+        echo '<div class="msg-cadastro-contato msg-cadastro-erro">Não foi possível deletar o usuário -> ' . $e->getMessage() . '</div>';
     }
-
 }
-
 ?>
-
 <div id="btn-limpar-sessao">
     <a href="?pg=usuario/usuarios">Voltar</a>
 </div>

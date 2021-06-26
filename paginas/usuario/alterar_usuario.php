@@ -5,8 +5,9 @@
         $usuario = $_POST["usuario"];
         $senha = $_POST["senha"];
         $data_hora_atualizacao = date('Y-m-d H:i:s');
+
         $usuario_resp= $_SESSION["nome"];
-        $descricao = ("Alteração de usuario:".$id);
+        $descricao = ("Modificar | id -> ".$id);
         $data_hora = date('Y-m-d H:i:s');    
         
         # Update no banco de dados
@@ -57,7 +58,6 @@
             <button type="submit">MODIFICAR</button>
         </div>
     </form>
-
         <?php
             }
         ?>    
