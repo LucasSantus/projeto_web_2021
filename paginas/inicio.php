@@ -1,5 +1,5 @@
-<h1>Início</h1>
+<h1>Dashboard</h1>
 
 <p>
-    Esta é a página inicial do site!
+    Esse projeto tem o objetivo de realizar cadastros de currículos.
 </p>

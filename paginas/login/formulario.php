@@ -5,15 +5,12 @@ if(isset($_SESSION["nome"])){
 }
 
 ?>
-
 <div id="div-form">
-    
     <h1>Login</h1>
-
     <form method="POST" action="?pg=login/processar_formulario">
         <div>
-            <label>Usuário</label>
-            <input type="text" name="usuario" required placeholder="Digite seu usuário..." />
+            <label>E-mail</label>
+            <input type="text" name="email" required placeholder="Digite seu email..." />
         </div>
         <div>
             <label>Senha</label>
@@ -21,5 +18,4 @@ if(isset($_SESSION["nome"])){
         </div>
         <button type="submit">Enviar</button>
     </form>
-    
 <div>

@@ -1,6 +1,6 @@
 <?php
 
-$dsn = 'mysql:dbname=projeto_web_2021_1;host=localhost;charset=utf8';
+$dsn = 'mysql:dbname=prova_va3;host=localhost;charset=utf8';
 $user = 'root';
 $password = '';
 

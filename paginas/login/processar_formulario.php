@@ -1,26 +1,21 @@
 <?php
 
 if(!empty($_POST)){
-    $usuario = $_POST["usuario"];
-    $senha = $_POST["senha"];
+    $email = $_POST["email"];
+    $senha = md5($_POST["senha"]);
 
-    if($usuario == "admin" && md5($senha) == md5("admin123")){
-        $_SESSION["nome"] = "Lucas Santos";
-
-?>
-        <span style="color:green;">Login efetuado!</span>
-        <script>
-            setTimeout(function() {
-                window.location.href = "?pg=area_restrita";
-            }, 3000);
-        </script>
-<?php
-    }
-    else{
-?>
-        <p style="color:red;">Dados inválidos! Tente novamente.</p>
-        <p><a href="javascript:history.back();">Voltar</a></p>
-<?php
+    $sql = "SELECT us.id, us.nome, us.email, us.telefone
+    FROM usuarios us
+    WHERE us.email = '".$email."' and senha = '".$senha."'";
+    $result = $conn->query($sql, PDO::FETCH_ASSOC);
+    if($info = $result->fetch()){
+        $_SESSION["nome"]=$info['nome'];
+        $_SESSION["email"]=$info['email'];
+        $_SESSION["telefone"]=$info['telefone'];
+        $_SESSION["id"] = $info['id'];
+    header("Location: ?pg=curriculo/curriculos");
+    }else{
+        echo '<div class="box_erro_login"><p><i class="fas fa-exclamation-circle"></i> Usuário não encontrado.</p></div>';
     }
 }
 else{
